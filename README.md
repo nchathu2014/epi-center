@@ -34,3 +34,29 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+## USGS API 
+Base URL: https://earthquake.usgs.gov/fdsnws/event/1/query
+
+Example — last 7 days, magnitude 4.5+:
+https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2024-01-01&minmagnitude=4.5
+
+Response shape:
+{
+  type: "FeatureCollection",
+  features: [
+    {
+      properties: {
+        mag: 7.2,
+        place: "Tonga region",
+        time: 1234567890,
+        status: "reviewed",
+        type: "earthquake",
+      },
+      geometry: {
+        coordinates: [longitude, latitude, depth]
+      }
+    }
+  ]
+}
