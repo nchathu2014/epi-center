@@ -12,7 +12,7 @@ import { DepthScatterWrapper } from "@/components/charts/DepthScatterWrapper";
 import { DashboardShell } from "@/components/dashboard/DashboardShell";
 
 export const metadata = {
-  title: "Earthquake Analytics Explorer",
+  title: "Total earthquakes",
   description: "Real-time global seismic data visualization powered by USGS",
 };
 
@@ -22,17 +22,19 @@ export default function DashboardPage() {
       <header className="flex items-center justify-between mb-6">
         <div>
           <p className="text-xs text-muted-foreground">USGS · real-time feed</p>
-          <h1 className="text-2xl font-medium">Earthquake analytics explorer</h1>
+          <h1 className="text-2xl font-medium">
+            Earthquake analytics explorer
+          </h1>
         </div>
-        <span className="text-xs text-muted-foreground">
-          Auto-refreshes every 5 min
+        <span className="text-xs text-muted-foreground ml-auto">
+          Auto-refreshes every 5 minutes
         </span>
       </header>
 
       <KPICards />
       <FilterBar />
 
-      <div className="rounded-xl border p-4 mb-4">
+      <div className="rounded-xl border p-4 mb-4 shadow-sm">
         <p className="text-sm font-medium mb-3">
           Global seismic activity · bubble size = magnitude · color = depth
         </p>
@@ -40,22 +42,22 @@ export default function DashboardPage() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-        <div className="rounded-xl border p-4">
+        <div className="rounded-xl border p-4 shadow-sm">
           <p className="text-sm font-medium mb-3">Magnitude distribution</p>
           <MagnitudeHistogramWrapper />
         </div>
-        <div className="rounded-xl border p-4">
+        <div className="rounded-xl border p-4 shadow-sm">
           <p className="text-sm font-medium mb-3">Daily frequency</p>
           <FrequencyTimelineWrapper />
         </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-        <div className="rounded-xl border p-4">
+        <div className="rounded-xl border p-4 shadow-sm">
           <p className="text-sm font-medium mb-3">Depth vs magnitude</p>
           <DepthScatterWrapper />
         </div>
-        <div className="rounded-xl border p-4">
+        <div className="rounded-xl border p-4 shadow-sm">
           <p className="text-sm font-medium mb-3">Recent significant events</p>
           <RecentEventsTable />
         </div>

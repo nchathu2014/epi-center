@@ -46,9 +46,9 @@ export function FilterBar() {
         Reset
       </Button>
 
-      <span className="text-xs text-muted-foreground ml-auto">
+      {/* <span className="text-xs text-muted-foreground ml-auto">
         Auto-refreshes every 5 minutes
-      </span>
+      </span> */}
     </div>
   );
 }

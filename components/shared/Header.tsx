@@ -1,16 +1,28 @@
+import Link from "next/link";
+
+
 export function Header() {
   return (
     <nav className="bg-gray-50 shadow-sm border-b border-gray-200 sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center p-3">
-          <h1 className="text-2xl md:text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            Epi<span className="text-red-500">Center</span>
-          </h1>
+          <div className="flex flex-col">
+            <Link href={'/'}>
+            <h1 className="text-2xl md:text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
+              Epi<span className="text-red-500">Center</span>
+              
+            </h1>
+            </Link>
+            <span className="text-sm">Earthquake Analytics Explorer</span>
+          </div>
+
           <div>
-            <p>Earthquake Analytics Explorer </p>
+            <p>
+              <Link className="underline" href={'/tech-stack'}>Tech-Stack</Link>
+               </p>
             <div className="flex items-center gap-3 text-xs text-muted-foreground">
               <span>
-                Data:
+                Data:{" "}
                 <a
                   href="https://earthquake.usgs.gov"
                   target="_blank"

@@ -43,7 +43,7 @@ export function KPICards() {
   return (
     <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
       {cards.map((card) => (
-        <div key={card.label} className="bg-muted rounded-lg p-4">
+        <div key={card.label} className="border shadow-sm bg-muted rounded-lg p-4">
           <p className="text-xs text-muted-foreground mb-1">{card.label}</p>
           <p className="text-2xl font-medium">{card.value}</p>
           <p className="text-xs text-muted-foreground mt-1">{card.sub}</p>
