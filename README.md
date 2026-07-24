@@ -1,3 +1,13 @@
+WHAT PROBLEM THIS APP RESOLVE:
+
+I named this app as "EpiCenter" which is a Earthquake Analytics Explorer build with Next.js, D3.js, Recharts, TypeScript, Shadcn
+It is a real-time analytics dashboard consuming the USGS API to visualize global seismic data across magnitude, depth,
+frequency, and geographic distribution.
+
+Live App: https://epi-center-seven.vercel.app/
+
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
